@@ -1,0 +1,188 @@
+/* Google fonts used */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-left: 12%;
+    padding-right: 12%;
+    background-color: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.25em;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
+
+header::before,
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: #ba4eaa;
+    z-index: -1;
+}
+
+header::before {
+    left: -50vw;
+}
+
+header::after {
+    right: -50vw;
+}
+
+.page-title{
+    text-align: left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+nav {
+    margin-left: 70px;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 0;
+    display: flex;
+
+}
+
+
+nav ul {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+main {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25em;
+    word-spacing: 5px;
+    line-height: 35px;
+    margin-top: 40px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-areas:
+        "title title title title"
+        "card1 card2 card3 card4"
+        "card1 card2 card3 card4";
+    grid-template-columns: repeat(4, 25%);
+    max-width: 100%;
+    grid-template-rows: min-content minmax(30px, 300px) minmax(30px, 300px);
+    grid-column-gap: 15px;
+}
+
+
+
+
+.title-line{
+    font-family: Arial, sans-serif;
+    font-size: 1.85em;
+    font-weight: 600;
+    margin-bottom: 40px;
+    grid-column: 1 / 4;
+    grid-row: 1/2;
+}
+
+#a {
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+
+#b {
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+
+#c {
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+#d {
+    grid-column: 4/5;
+    grid-row: 2/4;
+}
+
+.image-description {
+    padding: 20px 25px 20px 25px;
+    background-color: #f0f0f0;
+    overflow-y: auto;
+}
+
+.card-container{
+    display: grid;
+    grid-template-areas:         "image"        "text";
+    grid-template-rows: minmax(30px, 300px) minmax(30px, 300px);
+    grid-template-columns: 100%;
+    border-color: black;
+    border-radius: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bg{
+    background-color: black;
+}
+
+.hci-bg{
+    background-color: white;
+}
+
+
+#md-img, #ai-img, #hci-img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.page-title > a{
+    text-decoration: none;
+    color: black;
+}
